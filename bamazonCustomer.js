@@ -17,23 +17,19 @@ var connection = mysql.createConnection({
 
 connection.connect(function (err, res) {
     if (err) throw err;
-    console.log(res);
-    console.log("connected as id " + connection.threadId + "\n");
     readData();
 });
 
 function readData() {
     connection.query("SELECT * FROM products", function (err, res) {
+        if (err) throw err;
+
+        console.log("-----------------------------------");
         for (var i = 0; i < res.length; i++) {
             console.log(res[i].id + "|" + res[i].product + "|" + res[i].department + "|" + res[i].price + "|" + res[i].genre);
         }
         console.log("-----------------------------------");
 
-
-        // if (err) throw err;
-
-        // // Log all results of the SELECT statement
-        // console.log(res);
-        // connection.end();
+        connection.end();
     });
 }
