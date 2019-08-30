@@ -1,0 +1,24 @@
+{
+  "name": "other",
+  "version": "1.0.0",
+  "description": "LINK SHIT HERE",
+  "main": "other.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccahdz10/other.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebeccahdz10/other/issues"
+  },
+  "homepage": "https://github.com/rebeccahdz10/other#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "mysql": "^2.17.1"
+  }
+}
