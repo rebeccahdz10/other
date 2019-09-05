@@ -30,6 +30,25 @@ function readData() {
         }
         console.log("-----------------------------------");
 
-        connection.end();
+        inquirer
+            .prompt([
+                {
+                    type: "number",
+                    message: "Please enter the ID of the product you want to buy.",
+                    name: "product"
+                },
+                {
+                    type: "number",
+                    message: "How many do you want to buy?",
+                    name: "amount"
+                }
+            ])
+            .then(function (inquirerResponse) {
+                console.log(inquirerResponse.product);
+                console.log(inquirerResponse.amount);
+            });
+
+
+        // connection.end();
     });
 }
