@@ -26,7 +26,7 @@ function readData() {
 
         console.log("-----------------------------------");
         for (var i = 0; i < res.length; i++) {
-            console.log(res[i].id + "|" + res[i].product + "|" + res[i].department + "|" + res[i].price + "|" + res[i].genre);
+            console.log(res[i].id + "|" + res[i].product + "|" + res[i].department + "|" + concat("$", format((res[i].price), 2)) + "|" + res[i].stock + "ct");
         }
         console.log("-----------------------------------");
 
@@ -44,11 +44,10 @@ function readData() {
                 }
             ])
             .then(function (inquirerResponse) {
-                console.log(inquirerResponse.product);
-                console.log(inquirerResponse.amount);
+
             });
 
 
-        // connection.end();
+        connection.end();
     });
 }
