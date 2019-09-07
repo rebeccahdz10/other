@@ -1,7 +1,7 @@
 {
   "name": "other",
   "version": "1.0.0",
-  "description": "LINK SHIT HERE",
+  "description": "",
   "main": "other.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
