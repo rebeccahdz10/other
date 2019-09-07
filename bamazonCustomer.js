@@ -43,7 +43,14 @@ function readData() {
                     name: "amount"
                 }
             ])
+
             .then(function (inquirerResponse) {
+                console.log(inquirerResponse.product);
+                console.log(inquirerResponse.amount);
+
+                if (inquirerResponse.product > 10) {
+                    console.log('message:', "That is not a valid choice, try again!")
+                }
 
             });
 

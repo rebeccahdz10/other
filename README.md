@@ -1,1 +1,1 @@
-LINK SHIT HERE
+# Bamazon Node App
