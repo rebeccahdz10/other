@@ -25,6 +25,8 @@ function startApp() {
         }
         console.log("-----------------------------------");
 
+        var stock = "SELECT * FROM products WHERE ?"
+
         inquirer
             .prompt([
                 {
@@ -40,15 +42,20 @@ function startApp() {
             ])
 
             .then(function (inquirerResponse) {
-                console.log(inquirerResponse.product);
-                console.log(inquirerResponse.amount);
+                console.log("Your stock ID chosen: ", inquirerResponse.product);
+                console.log("Amount in your cart: ", inquirerResponse.amount);
 
-                if (inquirerResponse.product > 10) {
+                if (inquirerResponse.amount > stock) {
                     console.log('message:', "That is not a valid choice, try again!")
+                } else {
+                    run.prompt([
+                        {
+                            type: "confirm",
+                            message: "Are you sure you wish to purchase this?"
+                        }
+                    ])
                 }
-
-            });
-
+            })
 
         connection.end();
     });
