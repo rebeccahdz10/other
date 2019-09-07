@@ -26,7 +26,7 @@ function readData() {
 
         console.log("-----------------------------------");
         for (var i = 0; i < res.length; i++) {
-            console.log(res[i].id + "|" + res[i].product + "|" + res[i].department + "|" + concat("$", format((res[i].price), 2)) + "|" + res[i].stock + "ct");
+            console.log(res[i].id + "|" + res[i].product + "|" + res[i].department + "|" + "$" + res[i].price.toFixed(2) + "|" + res[i].stock + "ct");
         }
         console.log("-----------------------------------");
 
