@@ -15,12 +15,7 @@ var connection = mysql.createConnection({
     database: "bamazon"
 });
 
-connection.connect(function (err, res) {
-    if (err) throw err;
-    readData();
-});
-
-function readData() {
+function startApp() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
 
@@ -58,3 +53,4 @@ function readData() {
         connection.end();
     });
 }
+startApp();
